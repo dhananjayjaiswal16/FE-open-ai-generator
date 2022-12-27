@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { generateImage } from '../helper/helper';
 
-const InputForm = () => {
-  const [prompt, setPrompt] = useState();
-  const [size, setSize] = useState();
+const InputForm = ({ isLoading, setIsLoading }) => {
+  const [prompt, setPrompt] = useState("");
+  const [size, setSize] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -11,8 +12,7 @@ const InputForm = () => {
       alert("Please enter a value");
       return;
     }
-    console.log("prompt", prompt);
-    console.log("size", size);
+    const imageUrl = generateImage(prompt, size, setIsLoading);
   }
   return (
     <section class="showcase">
