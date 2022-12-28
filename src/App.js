@@ -5,9 +5,10 @@ import ShowImage from './components/ShowImage';
 import { useState } from 'react';
 
 function App() {
+  //console.log(window.location.hostname);
   const [isLoading, setIsLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
-  console.log("isLoading", isLoading);
+  //console.log("isLoading", isLoading);
   return (
     <>
       <div className="App">

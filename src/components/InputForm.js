@@ -13,7 +13,7 @@ const InputForm = ({ isLoading, setIsLoading, setImageUrl }) => {
       return;
     }
     const imageUrl = await generateImage(prompt, size, setIsLoading);
-    console.log("imageUrl in INputForm", imageUrl);
+    //console.log("imageUrl in INputForm", imageUrl);
     setImageUrl(imageUrl);
   }
   return (

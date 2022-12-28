@@ -11,7 +11,7 @@ const Navbar = () => {
           <div class="nav-links">
             <ul>
               <li>
-                <a href="https://beta.openai.com/docs" target="_blank">
+                <a href="https://beta.openai.com/docs/api-reference/images" target="_blank">
                   OpenAI API Docs
                 </a>
               </li>

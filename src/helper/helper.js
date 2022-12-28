@@ -1,13 +1,14 @@
 import axios from 'axios';
-
+import { backendApi } from '../config';
 export async function generateImage(prompt, size, setIsLoading) {
+  const backendUrl = backendApi();
   try {
     setIsLoading(true);
-    const response = await axios.post("http://localhost:5000/generateImage", {
+    const response = await axios.post(`${backendUrl}/generateImage`, {
       prompt,
       size
     });
-    console.log("response img in helper", response.data?.image);
+    //console.log("response img in helper", response.data?.image);
 
     // if (!response.ok) {
     //   setIsLoading(false);

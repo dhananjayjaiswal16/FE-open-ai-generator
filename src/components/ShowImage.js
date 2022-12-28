@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ShowImage = ({ imageUrl }) => {
-  console.log("imageUrl in ShowImage", imageUrl);
+  //console.log("imageUrl in ShowImage", imageUrl);
   return (
     <section class="image">
       <div class="image-container">
