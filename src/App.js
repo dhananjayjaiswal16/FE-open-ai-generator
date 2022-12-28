@@ -6,14 +6,15 @@ import { useState } from 'react';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
   console.log("isLoading", isLoading);
   return (
     <>
       <div className="App">
         <Navbar />
         <main>
-          <InputForm isLoading={isLoading} setIsLoading={setIsLoading} />
-          <ShowImage />
+          <InputForm isLoading={isLoading} setIsLoading={setIsLoading} setImageUrl={setImageUrl} />
+          <ShowImage imageUrl={imageUrl} />
         </main>
       </div>
 

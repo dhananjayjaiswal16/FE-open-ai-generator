@@ -7,12 +7,12 @@ export async function generateImage(prompt, size, setIsLoading) {
       prompt,
       size
     });
-    console.log("response img in helper", response.data.image);
+    console.log("response img in helper", response.data?.image);
 
-    if (!response.ok) {
-      setIsLoading(false);
-      throw new Error("Image could not be generated");
-    }
+    // if (!response.ok) {
+    //   setIsLoading(false);
+    //   throw new Error("Image could not be generated");
+    // }
     setIsLoading(false);
     return (response.data?.image);
   } catch (error) {

@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import { generateImage } from '../helper/helper';
 
-const InputForm = ({ isLoading, setIsLoading }) => {
+const InputForm = ({ isLoading, setIsLoading, setImageUrl }) => {
   const [prompt, setPrompt] = useState("");
   const [size, setSize] = useState("");
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if (!prompt) {
       alert("Please enter a value");
       return;
     }
-    const imageUrl = generateImage(prompt, size, setIsLoading);
+    const imageUrl = await generateImage(prompt, size, setIsLoading);
+    console.log("imageUrl in INputForm", imageUrl);
+    setImageUrl(imageUrl);
   }
   return (
     <section class="showcase">
